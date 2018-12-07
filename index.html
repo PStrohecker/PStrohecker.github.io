@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>656 Days of "Fake News"</title>
+	<meta name="description" content="Scrollama Demo: Fixed CSS">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<style>
+		/* default / demo page */
+
+		* {
+			box-sizing: border-box;
+		}
+
+		html,
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+		}
+
+		body {
+			min-height: 1280px;
+			font-weight: 300;
+			color: #2a2a2a;
+		}
+
+		p,
+		h1,
+		h2,
+		h3,
+		h4,
+		a {
+			margin: 0;
+			font-weight: 300;
+		}
+
+		a,
+		a:visited,
+		a:hover {
+			color: #f30;
+			text-decoration: none;
+			border-bottom: 1px solid currentColor;
+		}
+
+		#intro, #outro {
+			max-width: 40rem;
+			margin: 1rem auto;
+			text-align: center;
+		}
+
+		.intro__overline {
+			font-size: 1.4rem;
+		}
+
+		.intro__hed {
+			font-size: 1.4rem;
+			margin: 1.5rem auto;
+			text-transform: uppercase;
+			font-weight: 900;
+			letter-spacing: 0.05em;
+		}
+
+		.intro__dek, .outro__dek {
+			font-size: 1.4rem;
+		}
+
+		/* demo */
+
+		#intro, #outro {
+			margin-bottom: 320px;
+		}
+
+		#outro {
+			/*height: 640px;*/
+		}
+
+		/* scrollama */
+
+		#scroll {
+			position: relative;
+			border-top: 1px dashed #000;
+			border-bottom: 1px dashed #000;
+		}
+
+		.scroll__graphic {
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: auto;
+			background-color: #fff;
+			-webkit-transform: translate3d(0, 0, 0);
+			-moz-transform: translate3d(0, 0, 0);
+			transform: translate3d(0, 0, 0);
+		}
+
+		.scroll__graphic.is-fixed {
+			position: fixed;
+		}
+
+		.scroll__graphic.is-bottom {
+			bottom: 0;
+			top: auto;
+		}
+
+		.chart {
+			position: absolute;
+			right: 1rem;
+			top: 50%;
+			-moz-transform: translateY(-50%);
+			-webkit-transform: translateY(-50%);
+			transform: translateY(-50%);
+			background-color: #ddd;
+			border: 1px solid #000;
+		}
+
+		.chart p {
+			text-align: center;
+			padding: 1rem;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			-moz-transform: translate(-50%, -50%);
+			-webkit-transform: translate(-50%, -50%);
+			transform: translate(-50%, -50%);
+			font-size: 8rem;
+			font-weight: 900;
+			color: #666;
+		}
+
+		.scroll__text {
+			position: relative;
+			padding: 0 1rem;
+			max-width: 30rem;
+			width: 33%;
+		}
+
+		.step {
+			margin: 2rem auto;
+			border: 1px solid #333;
+		}
+
+		.step.is-active {
+			background-color: lightgoldenrodyellow;
+		}
+
+		.step p {
+			text-align: center;
+			padding: 1rem;
+			font-size: 1.5rem;
+		}
+	</style>
+
+</head>
+
+<body>
+	<section id='intro'>
+	
+		<h1 class='intro__hed'>656 Days of "Fake News"<br>
+			By Patrick Strohecker</h1>
+		<p class='intro__dek'>
+			The first tweet came more than a month after Donald Trump was elected president of the United States. It read: “Reports by @CNN that I will be working on The Apprentice during my Presidency, even part time, are ridiculous & untrue - FAKE NEWS!” From there, the claims of “fake news” by Trump only became more frequent and have since become part of the mainstream conscience. The use of the term, as well as referring to the media as “the enemy of the people,” has become a rallying cry for his base of supporters, while Trump’s detractors have fought against it and thrown their support behind the media and First Amendment. At any chance and about any topic, Trump has continued to claim “fake news,” making it his signature catchphrase during his first term as president and about as popular as his The Apprentice catchphrase, “YOU’RE FIRED!” Since taking office on Jan. 20, 2017 and running up through the midterm elections on Nov. 6, Trump has been president of the United States for 656 days. Over that time, he has claimed 610 times that somethin or someone was "fake news," sometimes using the term multiple times within a single tweet or sentence during a speech or interview. (We counted as a single instance if, for example, he used "fake news" multiple times in one tweet.) Just by using the 610 separate claims, that equates to an average of 0.93 uses of “fake news” per day in the time frame this project logged the data. The following is a deep analysis of who and what is “fake new,” according to President Trump and in what mediums he’s most apt to use the phrase, as well as when he’s claimed it most.
+		</p>
+		<p> <a target = '_blank' href='https://docs.google.com/spreadsheets/d/1fiJX1Xc39fDBlKxmTLtn4HgInQZbYqwItxA85bMQ3qY/edit#gid=17491414'>Data Source: "656 Days of 'Fake News'"</a> </p>
+	</section>
+	<section id='scroll'>
+		<div class='scroll__graphic'>
+			<div class='chart'>
+				<img src="Medium.jpg" height = "100%">
+			</div>
+		</div>
+		<div class='scroll__text'>
+			<div class='step' data-step='1'>
+				<p>Mediums: The data was gathered by pulling all of Trump's claims of "fake news" from tweets and public speaking engagements, which included interviews, remarks, speeches and press conferences. Analyzing the data, Trump was most comfortable claiming “fake news” in his tweets and in speeches, occasions when he was speaking directly to his supporters. Nearly half of Trump’s “fake news” claims came on his personal Twitter account, using the phrase 296 times. Add in his speeches, when he was speaking at political rallies and stumping for other candidates – another 178 claims – and the combination of tweets and speeches accounted for nearly 78 percent of all claims of “fake news.”
+</p>
+			</div>
+			<div class='step' data-step='2'>
+				<p>Topics: There's been no shortage of controversial scandals and events surrounding Trump’s presidency. The Russia investigation has been on-going pretty much from Day 1, while other key events, like his meeting with North Korean dictator Kim Jong-un, his repeal of Obamacare and immigration have dominated news cycles in the nearly two years since Trump came into office. However, there are other topics that have caused Trump to spout “fake news” at an astounding rate.</p>
+<p>Yes, references to Russia or his meeting with Russian president Vladimir Putin are among Trump’s most common topics referred to as “fake news.” There have been 42 instances when Trump has taken a shot at the media when it came to reporting on various aspects of Trump’s relationship with Russia. But, topics like the economy, Democrats and polls have caught the ire of Trump, as well. Some of the president’s biggest gripes about coverage have been about the reporting on the economy’s growth under his leadership, approval/disapproval polls and claiming the Democratic Party is working as an ally with the “fake news media” to try and bring him down.
+</p>
+			</div>
+			<div class='step' data-step='3'>
+				<p>Outlets/Reporters: Ever since Trump called out CNN in his first tweet using “fake news,” he’s had a real feud brewing with the network and its reporters. For the most part, the majority of Trump’s claims of “fake news” have been general uses, not calling out a specific outlet or reporter. In fact, 485 of his 610 claims (79.5 percent) weren’t directed at any outlet or reporter in particular. But, when he was calling out someone, CNN bore the brunt of it. </p>
+<p>In this case, when Trump accused a particular reporter of being “fake news,” I included that reporter in his/her respective outlet’s total. On 74 occasions, Trump specifically referenced CNN or one of its reporters of being “fake news,” the largest number of accusations launched at a particular organization. CNN even had the most number of reporters or executives accused of being “fake news,” with four different people – Jeff Zucker, Jim Acosta, Chris Cuomo and Jake Tapper – drawing the ire of the president. </p>
+<p>Trump’s attacks at CNN were more than double the next most-accused outlet – NBC and its reporters – which were called out 31 times. In total, Trump accused 13 different news and media outlets for being “fake news” and 10 different reporters or executives.</p>
+			</div>
+			<div class='step' data-step='4'>
+				<p>When: Trump has been in office for 23 different months and 21 in their entirety. Depending on what was happening around his presidency and the country ultimately had a huge impact on how often he was claiming “fake news.” Some of Trump’s most frequent use of the phrase came during months when there were serious events taking place. His use of “fake news” skyrocketed during October 2018, when he was making daily stops in various cities holding political rallies, campaigning for Republican politicians up for election in the nearing midterms. During that month, he was using the phrase an average of 2.61 times per day, by far the most frequent he was claiming “fake news.” Day after day, he was reading from the same scripts, accusing the same people and topics of being “fake news.” </p>
+<p>The second-most “fake news” month of Trump’s presidency came in August 2018, when he used the phrase 59 times over 31 days, nearly two times per day. During that month, there wasn’t one event that defined the month, but it was a collection of key moments that weren’t positive for Trump that saw him go on the defensive. One of Trump’s most monumental months in office, June 2018, when he held the summit with Kim Jong-un, is an example of a month of rampant use of “fake news,” but when one event highlights the entire month. He used the phrase “fake news” 49 times that month, with nine of those claims being about North Korea, which accounted for 36 percent of all uses of “fake news” with North Korea as a the central topic.</p>
+</p>
+			</div>
+		</div>
+	</section>
+	<section id='outro'> <p class='outro__dek'> Since the midterms have ended, Trump has continued to claim "fake news." And one could argue that his largest qualm with the media happened after data collection ended for this project. The day after the midterms, on Nov. 7, Trump got into a back-and-forth with Acosta of CNN. After the two argued for about three minutes in front of dozens of reporters, Acosta's press credential was stripped following the press briefing. That led to a band of media outlets throwing their support behind Acosta and CNN. After CNN sued President Trump and top White House aids for barring Acosta, the White House ultimately relented, awarding Acosta his credential and he was back in the White House press briefing on Tuesday, Nov. 27. It was just the latest moment in which reporters and news outlets wouldn’t succumb to Trump’s dislike of the “fake news media.” For however long Trump remains in office, there will be an entire network of journalists doing good, quality reporting about this administration. And, for however long Trump remains in office, he will continue to decry what those journalists are writing and saying as “fake news.”</p>
+		<h1 class='intro__hed'>Origins of this project</h1> <p class='outro__dek'> This project was originally started by Laurel Leff, a professor of journalism at Northeastern University in Boston, Massachusetts. Under her guidance, as well as the direction of fellow professors, Aleszu Bajak and Matt Carroll, this research project was conducted over the course of seven months from May through November. Data collection was done by combing through a couple databases, Factbase and the Trump Twitter Archive.</p></section>
+	
+	<script src='https://d3js.org/d3.v4.min.js'></script>
+	<script src='https://unpkg.com/intersection-observer@0.5.0/intersection-observer.js'></script>
+	<script src='https://unpkg.com/scrollama'></script>
+	<script>
+		// using d3 for convenience
+		var container = d3.select('#scroll');
+		var graphic = container.select('.scroll__graphic');
+		var chart = graphic.select('.chart');
+		var text = container.select('.scroll__text');
+		var step = text.selectAll('.step');
+
+		// initialize the scrollama
+		var scroller = scrollama();
+
+		// generic window resize listener event
+		function handleResize() {
+			// 1. update height of step elements
+			// var stepHeight = Math.floor(window.innerHeight * 0.75);
+			// step.style('height', stepHeight + 'px');
+
+			// 2. update width/height of graphic element
+			var bodyWidth = d3.select('body').node().offsetWidth;
+
+			graphic
+				.style('width', bodyWidth + 'px')
+				.style('height', window.innerHeight + 'px');
+
+			var chartMargin = 32;
+			var textWidth = text.node().offsetWidth;
+			var chartWidth = graphic.node().offsetWidth - textWidth - chartMargin;
+
+			chart
+				.style('width', chartWidth + 'px')
+				.style('height', Math.floor(window.innerHeight / 2) + 'px');
+
+
+			// 3. tell scrollama to update new element dimensions
+			scroller.resize();
+		}
+
+		// scrollama event handlers
+		function handleStepEnter(response) {
+			// response = { element, direction, index }
+
+			// add color to current step only
+			// step.classed('is-active', function (d, i) {
+			// 	return i === response.index;
+			// })
+
+			// update graphic based on step
+			// chart.select('p').text(response.index + 1)
+			switch(response.index) {
+				case 0:
+					chart.select('img').attr("src","Medium.jpg");
+					break;
+				case 1: 
+					chart.select('img').attr("src","Topic.jpg");
+					break;
+				case 2:
+					chart.select('img').attr("src","News_Outlet.jpg");
+					break;
+				case 3:
+					chart.select('img').attr("src","Month.jpg");
+					break;
+			}
+		}
+
+		function handleContainerEnter(response) {
+			// response = { direction }
+
+			// sticky the graphic (old school)
+			graphic.classed('is-fixed', true);
+			graphic.classed('is-bottom', false);
+		}
+
+		function handleContainerExit(response) {
+			// response = { direction }
+
+			// un-sticky the graphic, and pin to top/bottom of container
+			graphic.classed('is-fixed', false);
+			graphic.classed('is-bottom', response.direction === 'down');
+		}
+
+		function init() {
+			// 1. force a resize on load to ensure proper dimensions are sent to scrollama
+			handleResize();
+
+			// 2. setup the scroller passing options
+			// this will also initialize trigger observations
+			// 3. bind scrollama event handlers (this can be chained like below)
+			scroller.setup({
+				container: '#scroll',
+				graphic: '.scroll__graphic',
+				text: '.scroll__text',
+				step: '.scroll__text .step',
+				debug: false,
+			})
+				.onStepEnter(handleStepEnter)
+				.onContainerEnter(handleContainerEnter)
+				.onContainerExit(handleContainerExit);
+
+			// setup resize event
+			window.addEventListener('resize', handleResize);
+		}
+
+		// kick things off
+		init();
+	</script>
+</body>
+
+</html>
